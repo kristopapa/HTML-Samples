@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+    <title>Game of Thrones Youtube Video</title>
+ </head>
+
+ <body>
+<div style="position:relative; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden;">
+	<iframe  width="425" height="344" src="https://www.youtube.com/embed/F9Bo89m2f6g" frameborder="0" allowfullscreen 
+			style="position:absolute; top:0; left:0; width:100%; height:100%;">
+	</iframe>
+</div>
+
+<!--  your visible page content below -->
+Check out Game of Thrones on HBO's Website!!
+<div><iframe src="https://www.hbo.com" height="500" width="1300"></iframe></div>
+
+ </body>
+</html>

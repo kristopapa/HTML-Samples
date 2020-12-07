@@ -1,0 +1,86 @@
+def read_last_line(file_path: str)->str:
+   try:
+       readFile = open(file_path,"r")
+
+       lines = readFile.readlines()
+
+
+
+       if len(lines) == 0:
+
+           return ""
+
+       else:
+
+           return lines[len(lines)-1]
+
+   except FileNotFoundError:
+
+           return ""
+
+print(read_last_line("file.txt"))
+
+def read(file_path):
+
+   file = open(file_path, 'r')
+
+   return file.read()
+
+def write(file_path, line=None):
+
+
+   file = open(file_path, 'w')
+
+
+   if line is not None:
+
+       file.write(line)
+
+   file.close()
+
+def write_last_line(path,text):
+   with open(path,"a") as f1:
+       f1.write(text)
+       f1.close()
+
+def clear(path):
+   with open(path,"r") as f1:
+       f1.truncate()
+       f1.close()
+
+def delete_last_line(path):
+   with open(path,"r") as f1:
+       d=f1.read()
+       f1.close()
+       m= d.split("\n")
+       s= "\n".join(m[:-1])
+       f1 = open("file.txt","w+")
+       for i in range(len(s)):
+           f1.write(s[i])
+       f1.close()
+   return ""
+
+
+
+
+def swap_value(file_path: str, key: str, replacement):
+
+   with open(file_path) as f:
+
+       data = json.load(f)
+
+       old = data[key]
+
+       data[key] = replacement
+
+   with open(file_path, 'w') as f:
+       json.dump(data, f)
+
+   return old
+
+
+
+def update_transactions(file_path, transaction_list):
+   with open(file_path,'r') as f:
+       transaction=eval(f.read())
+       print('Old transaction list',transaction)
